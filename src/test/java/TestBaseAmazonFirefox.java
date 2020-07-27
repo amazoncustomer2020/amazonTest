@@ -37,7 +37,7 @@ public class TestBaseAmazonFirefox {
         loginPage.clickSignIn();
         mainPage.setSearchArticleName(article);
         mainPage.clickSearchButton();
-        searchResultPage.getCheaperestArticle().click();
+        searchResultPage.getCheapestArticle().click();
         String devaceName = articlePage.getTitle();
         articlePage.clickAddToBasket();
         articlePage.goToBasket();

@@ -16,7 +16,7 @@ public class SearchResultPage {
     List<Double> price = new ArrayList<>();
     ElementsCollection phonesPrice =  $$(By.xpath("//div[@class='a-section a-spacing-medium']//span[@class='a-price']"));
 
-    public SelenideElement getCheaperestArticle() {
+    public SelenideElement getCheapestArticle() {
         price = phonesPrice.stream()
                 .map(s -> Double.parseDouble(s.$(By.xpath(".//span[@class='a-price-whole']")).text()+"."+s.$(By.xpath(".//span[@class='a-price-fraction']")).text()))
                 .collect(Collectors.toList());
