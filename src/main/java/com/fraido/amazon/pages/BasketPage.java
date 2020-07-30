@@ -1,5 +1,6 @@
 package com.fraido.amazon.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
@@ -11,14 +12,14 @@ public class BasketPage {
     private SelenideElement emptyBasketMessage = $(By.xpath("//h1[@class='sc-empty-cart-header']"));
 
     public String getCheckArticleTitle() {
-        return articleTitle.text();
+        return articleTitle.shouldBe(Condition.visible).text();
     }
 
     public void clickDeleteArticle() {
-        deleteButton.click();
+        deleteButton.shouldBe(Condition.visible).click();
     }
 
     public String getEmptyBasketMessage() {
-        return emptyBasketMessage.text();
+        return emptyBasketMessage.shouldBe(Condition.visible).text();
     }
 }

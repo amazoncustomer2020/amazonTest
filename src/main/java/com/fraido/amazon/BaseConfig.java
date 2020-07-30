@@ -4,14 +4,7 @@ import com.codeborne.selenide.Configuration;
 
 
 public class BaseConfig {
-    public void beforeTest(String browserName) {
-        Configuration.startMaximized = true;
-        Configuration.baseUrl = "https://www.amazon.co.uk";
-        Configuration.timeout = 6000;
-        setConfiguration(browserName);
-    }
-
-    public void beforeTest() {
+     public void beforeTest() {
         Configuration.startMaximized = true;
         Configuration.baseUrl = "https://www.amazon.co.uk";
         Configuration.timeout = 6000;
