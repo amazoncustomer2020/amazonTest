@@ -31,10 +31,10 @@ public class MainPage {
     }
     public void clickSearchButton() {
 
-        searchButton.click();
+        searchButton.shouldBe(Condition.visible).click();
     }
     public void clickSingOutButton() {
-        exitButton.click();
+        exitButton.shouldBe(Condition.visible).click();
     }
     public void gamburgerButton() {
         gamburgerButton.shouldBe(Condition.visible).click();
@@ -48,6 +48,6 @@ public class MainPage {
     }
     public void clickSelectButton() {
 
-        selectButton.click();
+        selectButton.shouldBe(Condition.visible).click();
     }
 }
